@@ -24,7 +24,7 @@ public class LoanSimulation {
     private LocalDate startDate;
 
     @Column(nullable = false, precision = 2)
-    private BigInteger duration;
+    private int duration;
 
     @Column(nullable = false)
     private BigDecimal loanRate;
@@ -56,11 +56,11 @@ public class LoanSimulation {
         this.startDate = startDate;
     }
 
-    public BigInteger getDuration() {
+    public int getDuration() {
         return duration;
     }
 
-    public void setDuration(BigInteger duration) {
+    public void setDuration(int duration) {
         this.duration = duration;
     }
 

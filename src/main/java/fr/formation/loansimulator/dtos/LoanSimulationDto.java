@@ -2,7 +2,6 @@ package fr.formation.loansimulator.dtos;
 
 import javax.validation.constraints.*;
 import java.math.BigDecimal;
-import java.math.BigInteger;
 import java.time.LocalDate;
 
 public class LoanSimulationDto {
@@ -24,7 +23,7 @@ public class LoanSimulationDto {
 
     @NotNull
     @Positive
-    private BigInteger duration;
+    private int duration;
 
     @NotNull
     @FutureOrPresent
@@ -62,11 +61,11 @@ public class LoanSimulationDto {
         this.insuranceRate = insuranceRate;
     }
 
-    public BigInteger getDuration() {
+    public int getDuration() {
         return duration;
     }
 
-    public void setDuration(BigInteger duration) {
+    public void setDuration(int duration) {
         this.duration = duration;
     }
 
